@@ -12,7 +12,7 @@ You should finish reading the whole writeup before you start to code.
 
 This assignment will exercise your understanding of array and linked lists.
 
-This PA is due on ** **Wednesday, April 14 at 11:59pm** **.
+This PA is due on ** **Tuesday, April 12 at 11:59pm** **.
 
 ## CSE Mantra: *Start early, start often!*
 *You will notice throughout the quarter that the PAs get harder and harder. 
