@@ -21,7 +21,7 @@ future PAs that might take more time than the earlier ones.*
 
 ## Getting the Code
 
-The starter code is in the Github repository that you are currently looking at. 
+You can download the starter code at https://github.com/ucsd-cse12-sp22/cse12-pa2-Lists.
 If you are not familiar with Github, here are two easy ways to get your code.
 
 1. Download as a ZIP folder 
