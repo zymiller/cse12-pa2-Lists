@@ -3,10 +3,9 @@ tags: CSE12SP22
 ---
 ---
 
-# PA2 (Closed): Lists
+# PA2: Lists
 ---
 
-**This assignment is closed to collaboration.**
 
 You should finish reading the whole writeup before you start to code. 
 
@@ -373,16 +372,9 @@ from the schedule on the course web page.
 
 ## Asking for Help
 
-This is a *closed* PA, so you cannot get any help from other students or ask
-implementation questions to the staff. If you have any questions about the PA,
-you must ask them as _private_ questions on Piazza. Do not post publicly about
-this PA, even for clarification questions. Doing so is a violation of academic
-integrity. The full rules for closed PAs are on the course web site.
-
 Feel free to ask the staff about anything from lecture. For this PA, you may
 find it especially helpful to go over the worksheets and code from the lecture
-on Array Lists and Linked Lists. The staff will politely decline requests
-to help with the PA, however.
+on Array Lists and Linked Lists. The staff will may also provide guidance and clarification on this PA.
 
 If you have any policy questions, please ask!
 
