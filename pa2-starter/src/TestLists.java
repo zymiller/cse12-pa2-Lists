@@ -55,5 +55,45 @@ public class TestLists {
 		MyList<String> string_s = makeList(string_input);
 		assertArrayEquals(string_input, string_s.toArray());
 	}
+	
+	@Test
+	public void testNullArray() {
+		// Using the generic list to create an Integer list
+		Integer[] int_input = {1, 2, 3, null, 5};
+		MyList<Integer> int_s = makeList(int_input);
+		assertArrayEquals(int_input, int_s.toArray());
+		
+		// Using the generic list to create a String list
+		String[] string_input = {"a", "b", "c", null, "e"};
+		MyList<String> string_s = makeList(string_input);
+		assertArrayEquals(string_input, string_s.toArray());
+	}
+	
+	@Test
+	public void testTransforms() {
+		Integer[] int_input = {1, 2, 3};
+		MyList<Integer> int_s = makeList(int_input);
+		Integer[] output = {10, 20, 30};
+		int_s.transformAll(new multiplyBy10());
+		assertArrayEquals(output, int_s.toArray());
+	}
+	
+	@Test
+	public void testChooses() {
+		Integer[] int_input = {1, 2, 3, 4, 5};
+		MyList<Integer> int_s = makeList(int_input);
+		Integer[] output = {2, 4};
+		int_s.chooseAll(new evenNumChooser());
+		assertArrayEquals(output, int_s.toArray());
+	} 
 
+	@Test
+	public void testMultipleOps() {
+		Integer[] int_input = {1, 2, 3, 4, 5};
+		MyList<Integer> int_s = makeList(int_input);
+		Integer[] output = {20, 40};
+		int_s.chooseAll(new evenNumChooser());
+		int_s.transformAll(new multiplyBy10());
+		assertArrayEquals(output, int_s.toArray());
+	} 
 }
