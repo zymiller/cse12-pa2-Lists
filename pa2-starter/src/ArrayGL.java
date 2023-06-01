@@ -9,12 +9,9 @@ public class ArrayGL<E> implements MyList<E> {
     }
 
     public boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        } else {
-            return false;
+        return (this.size == 0);
         }
-    }
+    
     @SuppressWarnings("unchecked")
     public E[] toArray() {
         E[] copy = (E[])(new Object[this.size]);
@@ -25,10 +22,13 @@ public class ArrayGL<E> implements MyList<E> {
     }
     
     public void transformAll(MyTransformer mt) {
-    	for (int i = 0; i < this.size; i++) {
+    	int i = 0;
+    	while(i < this.size) {
     		elements[i] = (E)mt.transformElement(elements[i]);
+    		i++;
     	}
     }
+    
     @SuppressWarnings("unchecked")
     public void chooseAll(MyChooser mc) {
     	int newLength = 0;

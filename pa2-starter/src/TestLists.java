@@ -96,4 +96,42 @@ public class TestLists {
 		int_s.transformAll(new multiplyBy10());
 		assertArrayEquals(output, int_s.toArray());
 	} 
+	
+	@Test
+	public void testNulls() {
+		// Using the generic list to create an Integer list
+		String[] int_input = {null, null, null, null};
+		MyList<String> int_s = makeList(int_input);
+		assertEquals(false, int_s.isEmpty());
+	}
+	
+	@Test
+	public void testEmptyArray() {
+		// Using the generic list to create an Integer list
+		Integer[] int_input = {};
+		MyList<Integer> int_s = makeList(int_input);
+		assertArrayEquals(int_input, int_s.toArray());
+		
+		// Using the generic list to create a String list
+		String[] string_input = {};
+		MyList<String> string_s = makeList(string_input);
+		assertArrayEquals(string_input, string_s.toArray());
+	}
+	
+	@Test
+	public void testEmptyTransforms() {
+		Integer[] int_input = {};
+		MyList<Integer> int_s = makeList(int_input);
+		Integer[] output = {};
+		int_s.transformAll(new multiplyBy10());
+		assertArrayEquals(output, int_s.toArray());
+	}
+	
+	@Test
+	public void sizeOfList() {
+		Integer int_input[] = new Integer[10];
+		int_input[0] = 10;
+		MyList<Integer> int_s = makeList(int_input);
+		assertArrayEquals(int_input, int_s.toArray());
+	}
 }

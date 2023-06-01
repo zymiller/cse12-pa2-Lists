@@ -15,7 +15,6 @@ public class LinkedGL<E> implements MyList<E> {
 
     public LinkedGL(E[] contents) {
         this.front = new Node(null, null);
-        this.size = 0;
         for (E e : contents) {
         	add(e);
         }
@@ -32,13 +31,11 @@ public class LinkedGL<E> implements MyList<E> {
     }
     
     public boolean isEmpty() {
-    	if (this.size == 0) {
-    		return true;
-    	} else {
-    		return false;
-    	}
+    	return (this.size == 0);
     }
 
+    
+    //USE FOR LOOP
     @SuppressWarnings("unchecked")
     public E[] toArray() {
     	E[] copy = (E[])(new Object[this.size]);
